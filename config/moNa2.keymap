@@ -22,6 +22,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        parenthesis: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
+            label = "NEW_MACRO";
+        };
     };
 
     behaviors {
@@ -41,6 +48,15 @@
 
             tap-ms = <20>;
         };
+
+        encoder_up_down: encoder_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+            label = "ENCODER_UP_DOWN";
+        };
     };
 
     keymap {
@@ -48,26 +64,26 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &trans                &kp MINUS      &kp H        &kp J  &kp K     &lt 6 L   &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 4 COLON           &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 INT_HENKAN  &lt 2 SPACE  &lt 3 INT_MUHENKAN    &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                      &kp T                                               &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F                      &kp G        &trans                &kp MINUS        &kp H        &kp J  &kp K     &lt 6 L   &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                      &kp B        &lt 4 COLON           &kp SEMICOLON    &kp N        &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 LANG_ZENKAKUHANKAKU  &lt 2 SPACE  &lt 3 INT_MUHENKAN    &lt 4 BACKSPACE  &lt 5 ENTER                             &kp DEL
             >;
 
             sensor-bindings =
-                <&scroll_up_down>,
+                <&encoder_up_down>,
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_DOT       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                              &kp KP_PLUS
+&trans  &trans  &trans           &trans       &trans                    &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
+&trans  &trans  &kp LA(LS(TAB))  &kp LA(TAB)  &trans  &trans    &trans  &kp KP_DOT       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_ASTERISK
+&trans  &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans    &trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
+&trans  &trans  &trans           &trans       &trans  &trans    &trans  &trans                                                              &kp KP_PLUS
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_up_down>;
         };
 
         layer_2 {
@@ -78,7 +94,7 @@
 &trans                      &trans           &trans           &trans           &trans        &trans                     &trans          &trans                                                                     &kp PIPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_up_down>;
         };
 
         layer_3 {
@@ -89,7 +105,7 @@
 &trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_up_down>;
         };
 
         layer_4 {
@@ -100,7 +116,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_up_down>;
         };
 
         layer_5 {
@@ -111,7 +127,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_up_down>;
         };
 
         MOUSE {
@@ -122,7 +138,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&encoder_up_down>;
         };
     };
 };
