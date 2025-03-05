@@ -103,10 +103,10 @@
 
         Function {
             bindings = <
-&trans    &trans    &trans     &trans     &trans                     &trans  &kp F1  &kp F2   &kp F3   &kp F4
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans    &kp ESC  &trans  &kp F5  &kp F6   &kp F7   &kp F8
-&trans    &trans    &trans     &trans     &trans  &trans    &trans   &trans  &kp F9  &kp F10  &kp F11  &kp F12
-&trans    &trans    &trans     &trans     &trans  &trans    &trans   &trans                            &trans
+&trans    &trans    &trans     &trans     &trans                     &trans  &mt F13 F1  &mt F14 F2   &mt F15 F3   &mt F16 F4
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &trans    &kp ESC  &trans  &mt F17 F5  &mt F18 F6   &mt F19 F7   &mt F20 F8
+&trans    &trans    &trans     &trans     &trans  &trans    &trans   &trans  &mt F21 F9  &mt F22 F10  &mt F23 F11  &mt F24 F12
+&trans    &trans    &trans     &trans     &trans  &trans    &trans   &trans                                        &trans
             >;
 
             sensor-bindings = <&scroll_up_down_invert>;
