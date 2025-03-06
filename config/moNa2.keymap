@@ -111,7 +111,7 @@
         };
 
         tab_close_open {
-            bindings = <&mt LC(LS(TAB)) LC(F4)>;
+            bindings = <&mt LC(LS(T)) LC(F4)>;
             key-positions = <9 8>;
         };
     };
