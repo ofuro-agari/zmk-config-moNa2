@@ -82,22 +82,32 @@
 
         parenthesis {
             bindings = <&parenthesis>;
-            key-positions = <5 6>;
+            key-positions = <4 3>;
         };
 
         bracket {
             bindings = <&bracket>;
-            key-positions = <6 7>;
+            key-positions = <2 3>;
         };
 
         than {
             bindings = <&than>;
-            key-positions = <7 8>;
+            key-positions = <2 1>;
         };
 
         brace {
             bindings = <&brace>;
-            key-positions = <8 9>;
+            key-positions = <1 0>;
+        };
+
+        copy_cut {
+            bindings = <&mt LC(X) LC(C)>;
+            key-positions = <5 6>;
+        };
+
+        te {
+            bindings = <&mt LC(Y) LC(Z)>;
+            key-positions = <7 6>;
         };
     };
 
@@ -109,32 +119,32 @@
             label = "TO_LAYER_0";
         };
 
-        parenthesis: new_macro {
+        parenthesis: parenthesis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
-            label = "NEW_MACRO";
+            label = "PARENTHESIS";
         };
 
-        bracket: new_macro {
+        bracket: bracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
-            label = "NEW_MACRO";
+            label = "BRACKET";
         };
 
-        than: new_macro {
+        than: than {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LESS_THAN &kp GREATER_THAN &kp LEFT_ARROW>;
-            label = "NEW_MACRO";
+            label = "THAN";
         };
 
-        brace: new_macro {
+        brace: brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
-            label = "NEW_MACRO";
+            label = "BRACE";
         };
     };
 
