@@ -35,9 +35,24 @@
             key-positions = <19 20>;
         };
 
+        semicolon_colon {
+            bindings = <&mt COLON SEMICOLON>;
+            key-positions = <12 11>;
+        };
+
         hash_dollar {
             bindings = <&mt DOLLAR HASH>;
-            key-positions = <12 11>;
+            key-positions = <0 1 2>;
+        };
+
+        percent_ampersand {
+            bindings = <&mt AMPERSAND PERCENT>;
+            key-positions = <0 1 2>;
+        };
+
+        underscore_equal {
+            bindings = <&mt EQUAL UNDERSCORE>;
+            key-positions = <0 1 2>;
         };
     };
 
