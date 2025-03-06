@@ -54,6 +54,16 @@
             bindings = <&mt EQUAL UNDERSCORE>;
             key-positions = <0 1 2>;
         };
+
+        caret_tilde {
+            bindings = <&mt TILDE CARET>;
+            key-positions = <0 1 2>;
+        };
+
+        backslash_pipe {
+            bindings = <&mt PIPE BACKSLASH>;
+            key-positions = <0 1 2>;
+        };
     };
 
     macros {
