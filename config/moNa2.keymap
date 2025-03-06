@@ -64,6 +64,31 @@
             bindings = <&mt PIPE BACKSLASH>;
             key-positions = <0 1 2>;
         };
+
+        at_grave {
+            bindings = <&mt GRAVE AT_SIGN>;
+            key-positions = <0 1 2>;
+        };
+
+        ssterisk_slash {
+            bindings = <&mt SLASH ASTERISK>;
+            key-positions = <0 1 2>;
+        };
+
+        plus_minus {
+            bindings = <&mt MINUS PLUS>;
+            key-positions = <0 1 2>;
+        };
+
+        parenthesis {
+            bindings = <&parenthesis>;
+            key-positions = <5 6>;
+        };
+
+        bracket {
+            bindings = <&bracket>;
+            key-positions = <6 7>;
+        };
     };
 
     macros {
