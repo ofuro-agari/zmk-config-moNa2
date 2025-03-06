@@ -42,42 +42,42 @@
 
         hash_dollar {
             bindings = <&mt DOLLAR HASH>;
-            key-positions = <0 1 2>;
+            key-positions = <11 23>;
         };
 
         percent_ampersand {
             bindings = <&mt AMPERSAND PERCENT>;
-            key-positions = <0 1 2>;
+            key-positions = <12 24>;
         };
 
         underscore_equal {
             bindings = <&mt EQUAL UNDERSCORE>;
-            key-positions = <0 1 2>;
+            key-positions = <13 25>;
         };
 
         caret_tilde {
             bindings = <&mt TILDE CARET>;
-            key-positions = <0 1 2>;
+            key-positions = <14 26>;
         };
 
         backslash_pipe {
             bindings = <&mt PIPE BACKSLASH>;
-            key-positions = <0 1 2>;
+            key-positions = <17 29>;
         };
 
         at_grave {
             bindings = <&mt GRAVE AT_SIGN>;
-            key-positions = <0 1 2>;
+            key-positions = <18 30>;
         };
 
         ssterisk_slash {
             bindings = <&mt SLASH ASTERISK>;
-            key-positions = <0 1 2>;
+            key-positions = <19 31>;
         };
 
         plus_minus {
             bindings = <&mt MINUS PLUS>;
-            key-positions = <0 1 2>;
+            key-positions = <20 32>;
         };
 
         parenthesis {
