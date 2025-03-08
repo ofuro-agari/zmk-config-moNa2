@@ -247,6 +247,8 @@
 &trans            &kp LEFT_SHIFT  &kp Z   &kp X         &kp C   &kp V     &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp K_APPLICATION
 &kp LEFT_CONTROL  &trans          &trans  &kp LEFT_ALT  &trans  &trans    &trans  &trans                                                    &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         Automouse {
