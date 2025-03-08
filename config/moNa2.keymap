@@ -180,6 +180,16 @@
             tap-ms = <20>;
             label = "SCROLL_UP_DOWN_INVERT";
         };
+
+        test: test {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TEST";
+            bindings = <&to>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -188,8 +198,8 @@
         Default {
             bindings = <
 &kp Q          &kp W           &kp E               &kp R             &kp T                                                    &kp Y        &kp U              &kp I                &kp O            &kp P
-&kp A          &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G        &trans                 &lt 4 ESCAPE         &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &lt 5 MINUS
-&kp Z          &kp X           &kp C               &kp V             &kp B        &mt LS(F16) LS(F15)    &mt LS(F13) LS(F14)  &kp N        &kp M              &mkp MB1             &mkp MB2         &mkp MB4
+&kp A          &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G        &trans                 &lt 4 ESCAPE         &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &kp MINUS
+&kp Z          &kp X           &kp C               &kp V             &kp B        &mt LS(F16) LS(F15)    &mt LS(F13) LS(F14)  &kp N        &kp M              &mkp MB1             &mkp MB2         &test 5 MB4
 &kp LC(SPACE)  &kp LEFT_WIN    &trans              &lt 1 TAB         &lt 2 SPACE  &lt 3 DELETE           &kp BACKSPACE        &lt 5 ENTER                                                           &mkp MB5
             >;
 
