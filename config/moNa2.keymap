@@ -152,6 +152,14 @@
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
             label = "BRACE";
         };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     behaviors {
@@ -184,7 +192,7 @@
         test: test {
             compatible = "zmk,behavior-hold-tap";
             label = "TEST";
-            bindings = <&lt>, <&mkp>;
+            bindings = <&to>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
