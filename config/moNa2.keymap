@@ -196,6 +196,17 @@
             sensor-bindings = <&scroll_up_down_invert>;
         };
 
+        Function {
+            bindings = <
+&none     &none     &none      &none      &none                    &none  &mt F13 F1  &mt F14 F2   &mt F15 F3   &mt F16 F4
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none  &none    &kp ESC  &none  &mt F17 F5  &mt F18 F6   &mt F19 F7   &mt F20 F8
+&none     &none     &none      &none      &none  &none    &none    &none  &mt F21 F9  &mt F22 F10  &mt F23 F11  &mt F24 F12
+&none     &none     &none      &none      &none  &none    &none    &none                                        &none
+            >;
+
+            sensor-bindings = <&scroll_up_down_invert>;
+        };
+
         Numpad {
             bindings = <
 &none         &none         &none             &none           &none                       &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
@@ -207,23 +218,12 @@
             sensor-bindings = <&scroll_up_down_invert>;
         };
 
-        Arrow {
+        Shortcutkey {
             bindings = <
-&none         &none         &none             &none           &none                       &none  &kp HOME        &kp PRINTSCREEN  &kp PAGE_UP      &none
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none  &none    &kp ESCAPE  &none  &kp END         &kp UP_ARROW     &kp PAGE_DOWN    &none
-&none         &none         &none             &none           &none  &none    &none       &none  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp K_APPLICATION
-&none         &none         &none             &none           &none  &none    &none       &none                                                    &none
-            >;
-
-            sensor-bindings = <&scroll_up_down_invert>;
-        };
-
-        Function {
-            bindings = <
-&none     &none     &none      &none      &none                    &none  &mt F13 F1  &mt F14 F2   &mt F15 F3   &mt F16 F4
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none  &none    &kp ESC  &none  &mt F17 F5  &mt F18 F6   &mt F19 F7   &mt F20 F8
-&none     &none     &none      &none      &none  &none    &none    &none  &mt F21 F9  &mt F22 F10  &mt F23 F11  &mt F24 F12
-&none     &none     &none      &none      &none  &none    &none    &none                                        &none
+&none         &none         &none             &none           &none                       &kp LA(KP_NUMBER_1)  &kp LA(KP_NUMBER_2)  &kp LA(KP_NUMBER_3)  &kp LA(KP_NUMBER_4)  &kp LA(KP_NUMBER_5)
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none  &none    &kp ESCAPE  &none                &none                &none                &none                &none
+&none         &none         &none             &none           &none  &none    &none       &none                &none                &none                &none                &none
+&none         &none         &none             &none           &none  &none    &none       &none                                                                               &none
             >;
 
             sensor-bindings = <&scroll_up_down_invert>;
@@ -242,10 +242,10 @@
 
         Shortcut_Scroll {
             bindings = <
-&kp TAB           &kp F2          &kp F4  &kp F5        &kp F6                       &kp Y  &kp HOME        &kp PRINTSCREEN  &kp PAGE_UP      &none
-&none             &kp A           &kp S   &kp F         &kp G   &none    &kp ESCAPE  &none  &kp END         &kp UP_ARROW     &kp PAGE_DOWN    &none
-&none             &kp LEFT_SHIFT  &kp Z   &kp X         &kp C   &kp V    &none       &none  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp K_APPLICATION
-&kp LEFT_CONTROL  &none           &none   &kp LEFT_ALT  &none   &none    &none       &none                                                    &none
+&kp TAB           &kp F2          &kp F4      &kp F5        &kp F6                  &kp Y  &kp HOME        &kp PRINTSCREEN  &kp PAGE_UP      &none
+&none             &kp A           &kp S       &kp F         &kp G   &none    &none  &none  &kp END         &kp UP_ARROW     &kp PAGE_DOWN    &none
+&none             &kp LEFT_SHIFT  &kp Z       &kp X         &kp C   &kp V    &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp K_APPLICATION
+&kp LEFT_CONTROL  &kp LEFT_WIN    &kp ESCAPE  &kp LEFT_ALT  &none   &none    &none  &none                                                    &none
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
