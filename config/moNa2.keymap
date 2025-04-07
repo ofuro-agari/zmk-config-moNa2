@@ -223,7 +223,7 @@
 &none         &none         &none             &none           &none                       &kp LA(KP_NUMBER_1)  &kp LA(KP_NUMBER_2)  &kp LA(KP_NUMBER_3)  &kp LA(KP_NUMBER_4)  &kp LA(KP_NUMBER_5)
 &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none  &none    &kp ESCAPE  &none                &none                &none                &none                &none
 &none         &none         &none             &none           &none  &none    &none       &none                &none                &none                &none                &none
-&none         &none         &none             &none           &none  &none    &none       &none                                                                               &none
+&none         &none         &none             &none           &none  &none    &none       &kp LA(KP_NUMBER_0)                                                                 &none
             >;
 
             sensor-bindings = <&scroll_up_down_invert>;
