@@ -256,10 +256,10 @@
 
         Shortcut_Scroll {
             bindings = <
-&kp TAB           &kp F2          &kp F4      &kp F5        &kp F6                          &kp Y  &kp HOME        &kp PRINTSCREEN  &kp PAGE_UP      &none
-&none             &kp A           &kp S       &kp F         &kp G      &none         &none  &none  &kp END         &kp UP_ARROW     &kp PAGE_DOWN    &none
-&none             &kp LEFT_SHIFT  &kp Z       &kp X         &kp C      &kp V         &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp K_APPLICATION
-&kp LEFT_CONTROL  &kp LEFT_WIN    &kp ESCAPE  &kp LEFT_ALT  &kp SPACE  &kp DELETE    &none  &none                                                    &none
+&kp TAB           &kp F2          &kp F4      &kp F5        &kp F6                                  &kp Y      &kp HOME        &kp PRINTSCREEN  &kp PAGE_UP      &none
+&none             &kp A           &kp S       &kp F         &kp G      &none         &none          &none      &kp END         &kp UP_ARROW     &kp PAGE_DOWN    &none
+&none             &kp LEFT_SHIFT  &kp Z       &kp X         &kp C      &kp V         &none          &none      &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp K_APPLICATION
+&kp LEFT_CONTROL  &kp LEFT_WIN    &kp ESCAPE  &kp LEFT_ALT  &kp SPACE  &kp DELETE    &kp BACKSPACE  &kp ENTER                                                    &none
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
